@@ -9,8 +9,7 @@ namespace GreatCRM.Models
 {
     public class ProposalRider
     {
-        public string Note { get; set; }
-
+        public int ProposalRiderId { get; set; }
 
         [Key]
         [Column(Order = 1)]
