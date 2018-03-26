@@ -1,0 +1,55 @@
+﻿@model GreatCRM.Models.ViewModels.RecordViewModels
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Broker</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Broker.BrokerId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Broker.BrokerId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Broker.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Broker.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Broker.Age)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Broker.Age)
+        </dd>
+
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Broker.BrokerId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+<p>    
+    @Html.ActionLink("Create Client", "Create", "Client", new { brokerId = Model.Broker.BrokerId }, null )
+    @*<a href="@Url.Action("Create", "Client")?brokerId=@Model.Broker.BrokerId">Create CLIENT</a>*@
+</p>
+
+<ol>
+    @foreach (var item in Model.Broker.Clients)
+    {
+        <li><a href="@Url.Action("Details", "Client")/@item.ClientId">@item.Name</a></li>
+    }
+</ol>
+
