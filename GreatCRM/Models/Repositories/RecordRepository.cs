@@ -92,6 +92,11 @@ namespace GreatCRM.Models.Repositories
             client.Proposals.Add(obj);
         }
 
+        public void InsertRider(Proposal obj, int id)
+        {
+            var rider = db.Riders.Find(id);
+            rider.Proposals.Add(obj);
+        }
 
         // END
 

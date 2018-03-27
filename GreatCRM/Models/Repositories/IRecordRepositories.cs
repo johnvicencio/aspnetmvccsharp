@@ -25,5 +25,7 @@ namespace GreatCRM.Models.Repositories
 
         void InsertBroker(Client obj, int id); // for client broker key
         void InsertClient(Proposal obj, int id); // for proposal client key
+
+        void InsertRider(Proposal obj, int id); // for proposal rider key
     }
 }

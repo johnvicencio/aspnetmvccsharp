@@ -15,6 +15,7 @@ namespace GreatCRM.Models
         public string RiderName { get; set; }
 
         //Navigational Propersties
-        public virtual ICollection<Proposal> Proposals { get; set; } // many to many relationship with proposals
+        public virtual ICollection<Proposal> Proposals { get; set; }
+
     }
 }

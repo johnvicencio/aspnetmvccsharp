@@ -25,10 +25,24 @@
         <dd>
             @Html.DisplayFor(model => model.Proposal.Insurance)
         </dd>
+        <dt>
+           @Html.DisplayNameFor(model => model.Proposal.Riders)
+        </dt>
 
+        <dd>
+            @{ 
+                var last = Model.Proposal.Riders.ToList().Last();
+            }
+            @foreach (var rider in Model.Proposal.Riders)
+            {
+                @rider.RiderName
+            }
+        </dd>
     </dl>
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.Proposal.ProposalId }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
+
+

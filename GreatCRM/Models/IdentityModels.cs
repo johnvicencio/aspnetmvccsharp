@@ -32,7 +32,6 @@ namespace GreatCRM.Models
 
         public DbSet<Proposal> Proposals { get; set; }
         public DbSet<Rider> Riders { get; set; }
-        public DbSet<ProposalRider> ProposalRiders { get; set; }
 
 
         public static ApplicationDbContext Create()

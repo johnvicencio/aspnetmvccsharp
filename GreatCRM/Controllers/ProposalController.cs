@@ -18,16 +18,21 @@ namespace GreatCRM.Controllers
 
         private IRecordRepository<Proposal> repositoryProposal = null;
         private IRecordRepository<Client> repositoryClient = null;
+        private IRecordRepository<Rider> repositoryRider = null;
         public ProposalController()
         {
             this.repositoryProposal = new RecordRepository<Proposal>();
             this.repositoryClient = new RecordRepository<Client>();
+            this.repositoryRider = new RecordRepository<Rider>();
         }
 
-        public ProposalController(IRecordRepository<Proposal> repositoryProposal, IRecordRepository<Client> repositoryClient)
+        public ProposalController(IRecordRepository<Proposal> repositoryProposal, 
+            IRecordRepository<Client> repositoryClient, IRecordRepository<Rider> repositoryRider
+            )
         {
             this.repositoryProposal = repositoryProposal;
             this.repositoryClient = repositoryClient;
+            this.repositoryRider = repositoryRider;
         }
         // GET: Proposal
         public ActionResult Index()
@@ -61,7 +66,7 @@ namespace GreatCRM.Controllers
             var viewModel = new RecordViewModels();
             viewModel.Proposals = repositoryProposal.GetAll();
             ViewBag.ClientId = new SelectList(repositoryClient.GetAll().Where(x => x.ClientId == clientId), "ClientId", "Name");
-            //ViewBag.RiderId = new MultiSelectList(db.Riders, "RiderId", "RiderName");
+            ViewBag.RiderId = new MultiSelectList(db.Riders, "RiderId", "RiderName");
             return View(viewModel);
         }
 
@@ -70,12 +75,23 @@ namespace GreatCRM.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ProposalId,Insurance,ClientId")] Proposal proposal, int? clientId)
+        public ActionResult Create([Bind(Include = "ProposalId,Insurance,ClientId")] Proposal proposal, int? clientId, int[] Riders)
         {
             var viewModel = new RecordViewModels();
             viewModel.Proposal = proposal;
             if (ModelState.IsValid)
             {
+                if (Riders != null)
+                {
+                    foreach (var RiderId in Riders)
+                    {
+                        //var rider = repositoryRider.Search(RiderId);
+                        // proposal.Riders.Add(rider);
+                        repositoryProposal.InsertRider(proposal, RiderId);
+                        //repositoryProposal.Save();
+                    }
+                    
+                }
                 repositoryProposal.InsertClient(proposal, (int)clientId);
                 repositoryProposal.Save();
                 //db.Proposals.Add(proposal);

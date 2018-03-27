@@ -18,9 +18,10 @@ namespace GreatCRM.Models
         public int ClientId { get; set; }
         public virtual Client Client { get; set; }
 
- 
-        public virtual ICollection<Rider> Riders { get; set; } // many to many relationship with riders
+
+        public virtual ICollection<Rider> Riders { get; set; }
 
 
-}
+
+    }
 }

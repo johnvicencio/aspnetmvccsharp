@@ -34,7 +34,7 @@
             @Html.LabelFor(model => model.Riders, "RiderId", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.ListBox("Riders", (MultiSelectList)ViewBag.RiderId, new { @class = "form-control" } )
-                @Html.ValidationMessageFor(model => model.ClientId, "", new { @class = "text-danger" })
+                @Html.ValidationMessageFor(model => model.Riders, "", new { @class = "text-danger" })
             </div>
         </div>
         <div class="form-group">

@@ -77,8 +77,6 @@ P:\ASPNET\DMS\GreatCRM\GreatCRM\bin\Microsoft.Owin.Security.Twitter.xml
 P:\ASPNET\DMS\GreatCRM\GreatCRM\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 P:\ASPNET\DMS\GreatCRM\GreatCRM\obj\Debug\GreatCRM.dll
 P:\ASPNET\DMS\GreatCRM\GreatCRM\obj\Debug\GreatCRM.pdb
-P:\ASPNET\DMS\GreatCRM\GreatCRM\obj\Debug\GreatCRM.Migrations.Initial.resources
-P:\ASPNET\DMS\GreatCRM\GreatCRM\obj\Debug\GreatCRM.csproj.GenerateResource.Cache
 P:\ASPNET\DMS\GreatCRM\GreatCRM\bin\roslyn\csc.exe.config
 P:\ASPNET\DMS\GreatCRM\GreatCRM\bin\roslyn\csc.rsp
 P:\ASPNET\DMS\GreatCRM\GreatCRM\bin\roslyn\csi.exe
@@ -120,16 +118,5 @@ P:\ASPNET\DMS\GreatCRM\GreatCRM\bin\Microsoft.AspNet.TelemetryCorrelation.dll
 P:\ASPNET\DMS\GreatCRM\GreatCRM\bin\System.Diagnostics.DiagnosticSource.dll
 P:\ASPNET\DMS\GreatCRM\GreatCRM\bin\Microsoft.AspNet.TelemetryCorrelation.xml
 P:\ASPNET\DMS\GreatCRM\GreatCRM\bin\System.Diagnostics.DiagnosticSource.xml
-P:\ASPNET\DMS\GreatCRM\GreatCRM\obj\Debug\GreatCRM.csprojResolveAssemblyReference.cache
-P:\ASPNET\DMS\GreatCRM\GreatCRM\obj\Debug\GreatCRM.Migrations.AddedProposalAndRiderTables.resources
-P:\ASPNET\DMS\GreatCRM\GreatCRM\obj\Debug\GreatCRM.Migrations.ClientOneToManyProposals.resources
-P:\ASPNET\DMS\GreatCRM\GreatCRM\obj\Debug\GreatCRM.Migrations.AddedProposalManyToManyRelationshipWithRider.resources
-P:\ASPNET\DMS\GreatCRM\GreatCRM\obj\Debug\GreatCRM.Migrations.FixedRiderNameFromIntToStringProperty.resources
-P:\ASPNET\DMS\GreatCRM\GreatCRM\obj\Debug\GreatCRM.Migrations.FixesProposalToRiderRelationships.resources
-P:\ASPNET\DMS\GreatCRM\GreatCRM\obj\Debug\GreatCRM.Migrations.Multi.resources
-P:\ASPNET\DMS\GreatCRM\GreatCRM\obj\Debug\GreatCRM.Migrations.FixedManyToMany.resources
-P:\ASPNET\DMS\GreatCRM\GreatCRM\obj\Debug\GreatCRM.Migrations.FixedManyToMany1.resources
-P:\ASPNET\DMS\GreatCRM\GreatCRM\obj\Debug\GreatCRM.Migrations.FixedManyToMany2.resources
-P:\ASPNET\DMS\GreatCRM\GreatCRM\obj\Debug\GreatCRM.Migrations.FixedManyToMany3.resources
-P:\ASPNET\DMS\GreatCRM\GreatCRM\obj\Debug\GreatCRM.Migrations.FixedManyToMany4.resources
-P:\ASPNET\DMS\GreatCRM\GreatCRM\obj\Debug\GreatCRM.Migrations.FixedManyToMany5.resources
+P:\ASPNET\DMS\GreatCRM\GreatCRM\obj\Debug\GreatCRM.Migrations.Initial.resources
+P:\ASPNET\DMS\GreatCRM\GreatCRM\obj\Debug\GreatCRM.csproj.GenerateResource.Cache
